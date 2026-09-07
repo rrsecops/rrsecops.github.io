@@ -1,0 +1,38 @@
+title: "FortiAnalyzer Além dos Relatórios"
+description: "SecOps, Detection Engineering e Threat Hunting com FortiAnalyzer."
+url: "https://renildo1994.github.io"
+baseurl: ""
+theme: minima
+lang: pt-BR
+author:
+  name: "Renildo"
+header_pages:
+  - start-here.md
+  - secops/index.md
+  - labs/index.md
+  - detections/index.md
+  - research/index.md
+  - about.md
+collections:
+  labs:
+    output: true
+    permalink: /labs/:name/
+  detections:
+    output: true
+    permalink: /detections/:name/
+  research:
+    output: true
+    permalink: /research/:name/
+defaults:
+  - scope: {path: "", type: "posts"}
+    values: {layout: article}
+  - scope: {path: "", type: "labs"}
+    values: {layout: lab}
+  - scope: {path: "", type: "detections"}
+    values: {layout: detection}
+  - scope: {path: "", type: "research"}
+    values: {layout: research}
+plugins:
+  - jekyll-feed
+show_excerpts: true
+permalink: /articles/:year/:month/:day/:title/
